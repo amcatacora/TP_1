@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1636386190 source:c:\users\adrian catacora\desktop\utn\programacion\proyectos\tp_1\funciones.c
+
+1636388344 source:c:\users\adrian catacora\desktop\utn\programacion\proyectos\tp_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1636386266 c:\users\adrian catacora\desktop\utn\programacion\proyectos\tp_1\funciones.h
+
