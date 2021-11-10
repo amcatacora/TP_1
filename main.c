@@ -21,7 +21,7 @@ int main()
         printf("8- Calcular todas las operaciones\n");
         printf("9- Salir\n");
 
-        printf("\nA=%d B=%d\n\n", a, b);
+        printf("\nA=%.2f B=%.2f\n\n", a, b);
 
         printf("Ingrese una opcion: ");
         scanf("%d",&opcion);
@@ -29,8 +29,12 @@ int main()
         switch(opcion)
         {
             case 1:
+                printf ("Ingresar 1er operando: ");
+                scanf ("%.2f", &a);
                 break;
             case 2:
+                printf ("Ingresar 2do operando: ");
+                scanf ("%.2f", &b);
                 break;
             case 3:
                 break;
