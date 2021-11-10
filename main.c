@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 #include "funciones.h"
 
 int main()
@@ -20,6 +21,9 @@ int main()
         printf("8- Calcular todas las operaciones\n");
         printf("9- Salir\n");
 
+        printf("\nA=%d B=%d\n\n", a, b);
+
+        printf("Ingrese una opcion: ");
         scanf("%d",&opcion);
 
         switch(opcion)
@@ -44,7 +48,16 @@ int main()
                 seguir = 'n';
                 break;
         }
+        if(opcion != 9) {
+            hacerPausa();
+        }
     }
 
     return 0;
+}
+
+void hacerPausa() {
+    printf("\nPresiona una techa para continuar");
+    getch(); //pausa
+    system("cls"); //limpia la consola
 }
