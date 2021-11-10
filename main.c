@@ -3,6 +3,8 @@
 #include <conio.h>
 #include "funciones.h"
 
+void hacerPausa();
+
 int main()
 {
     char seguir='s';
