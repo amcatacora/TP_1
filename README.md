@@ -1,4 +1,4 @@
-# Hacer una calculadora. Para ello el programa iniciará y contará con un menú de opciones:
+## Hacer una calculadora. Para ello el programa iniciará y contará con un menú de opciones:
 
 1. Ingresar 1er operando (A=x)
 2. Ingresar 2do operando (B=y)
