@@ -58,15 +58,27 @@ int main()
 }
 
 void imprimirMenu() {
-    printf("1- Ingresar 1er operando (A=x)\n");
-    printf("2- Ingresar 2do operando (B=y)\n");
-    printf("3- Calcular la suma (A+B)\n");
-    printf("4- Calcular la resta (A-B)\n");
-    printf("5- Calcular la division (A/B)\n");
-    printf("6- Calcular la multiplicacion (A*B)\n");
-    printf("7- Calcular el factorial (A!)\n");
-    printf("8- Calcular todas las operaciones\n");
-    printf("9- Salir\n");
+    printf("%c",218);
+    printChar(196, 37);
+    printf("%c\n",191);
+    printf("%c 1- Ingresar 1er operando (A=x)      %c \n", 179, 179);
+    printf("%c 2- Ingresar 2do operando (B=y)      %c \n", 179, 179);
+    printf("%c 3- Calcular la suma (A+B)           %c \n", 179, 179);
+    printf("%c 4- Calcular la resta (A-B)          %c \n", 179, 179);
+    printf("%c 5- Calcular la division (A/B)       %c \n", 179, 179);
+    printf("%c 6- Calcular la multiplicacion (A*B) %c \n", 179, 179);
+    printf("%c 7- Calcular el factorial (A!)       %c \n", 179, 179);
+    printf("%c 8- Calcular todas las operaciones   %c \n", 179, 179);
+    printf("%c 9- Salir                            %c \n", 179, 179);
+    printf("%c",192);
+    printChar(196, 37);
+    printf("%c\n",217);
+}
+
+void printChar(c, a) {
+    for(int i=0;i<a;i++) {
+        printf("%c", c);
+    }
 }
 
 void hacerPausa() {
