@@ -3,25 +3,18 @@
 #include <conio.h>
 #include "funciones.h"
 
+void imprimirMenu();
 void hacerPausa();
 
 int main()
 {
     char seguir='s';
     int opcion=0;
-    float a=0,b=0;
+    float a=0,b=0,resultado=0;
 
     while(seguir=='s')
     {
-        printf("1- Ingresar 1er operando (A=x)\n");
-        printf("2- Ingresar 2do operando (B=y)\n");
-        printf("3- Calcular la suma (A+B)\n");
-        printf("4- Calcular la resta (A-B)\n");
-        printf("5- Calcular la division (A/B)\n");
-        printf("6- Calcular la multiplicacion (A*B)\n");
-        printf("7- Calcular el factorial (A!)\n");
-        printf("8- Calcular todas las operaciones\n");
-        printf("9- Salir\n");
+        imprimirMenu();
 
         printf("\nA=%.2f B=%.2f\n\n", a, b);
 
@@ -47,6 +40,8 @@ int main()
             case 6:
                 break;
             case 7:
+                resultado = factorial(a);
+                printf("\nEl factorial de A es: %.2f\n", resultado);
                 break;
             case 8:
                 break;
@@ -60,6 +55,18 @@ int main()
     }
 
     return 0;
+}
+
+void imprimirMenu() {
+    printf("1- Ingresar 1er operando (A=x)\n");
+    printf("2- Ingresar 2do operando (B=y)\n");
+    printf("3- Calcular la suma (A+B)\n");
+    printf("4- Calcular la resta (A-B)\n");
+    printf("5- Calcular la division (A/B)\n");
+    printf("6- Calcular la multiplicacion (A*B)\n");
+    printf("7- Calcular el factorial (A!)\n");
+    printf("8- Calcular todas las operaciones\n");
+    printf("9- Salir\n");
 }
 
 void hacerPausa() {
