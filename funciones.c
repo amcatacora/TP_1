@@ -1,7 +1,7 @@
 /*
     Calcular factorial de un numero
 */
-float factorial(float n) {
+int factorial(int n) {
     if(n > 0) {
         return n * factorial(n - 1);
     } else {
