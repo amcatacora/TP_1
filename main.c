@@ -32,8 +32,12 @@ int main()
                 scanf ("%f", &b);
                 break;
             case 3:
+                resultado = suma;
+                printf("\nLa suma de los operandos es: %.2f\n", resultado);
                 break;
             case 4:
+                resultado = resta;
+                printf("\nLa diferencia entre los operandos es: %.2f\n", resultado);
                 break;
             case 5:
                 break;
