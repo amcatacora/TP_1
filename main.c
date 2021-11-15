@@ -32,16 +32,20 @@ int main()
                 scanf ("%f", &b);
                 break;
             case 3:
-                resultado = suma;
+                resultado = suma(a, b);
                 printf("\nLa suma de los operandos es: %.2f\n", resultado);
                 break;
             case 4:
-                resultado = resta;
+                resultado = resta(a, b);
                 printf("\nLa diferencia entre los operandos es: %.2f\n", resultado);
                 break;
             case 5:
+                resultado = division(a, b);
+                printf("\nLa division entre los operandos es: %.2f\n", resultado);
                 break;
             case 6:
+                resultado = multiplicacion(a, b);
+                printf("\nLa multiplicacion entre los operandos es: %.2f\n", resultado);
                 break;
             case 7:
                 resultado = factorial(a);
@@ -52,6 +56,9 @@ int main()
             case 9:
                 seguir = 'n';
                 break;
+            default:
+                // hacerPausa();
+            break;
         }
         if(opcion != 9) {
             hacerPausa();

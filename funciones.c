@@ -11,28 +11,28 @@ int factorial(int n) {
 /*
     Calcular la suma (A+B)
 */
-float suma(float a, float b){
-    float resultado = a + b;
+int suma(int a, int b){
+    int resultado = a + b;
     return resultado;
 }
 /*
     Calcular la resta (A+B)
 */
-float resta(float a, float b){
-  float resultado = a - b;
+int resta(int a, int b){
+  int resultado = a - b;
   return resultado;
 }
 /*
     Calcular la division (A+B)
 */
-float division(float a, float b){
-  float resultado = a / b;
+int division(int a, int b){
+  int resultado = a / b;
   return resultado;
 }
 /*
     Calcular la division (A+B)
 */
-float multiplicacion(float a, float b){
-  float resultado = a * b;
+int multiplicacion(int a, int b){
+  int resultado = a * b;
   return resultado;
 }
