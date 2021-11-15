@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include <windows.h>
 #include "funciones.h"
 
 void imprimirMenu();
 void hacerPausa();
+void setColor(int background, int text);
 void printChar(char c, int a);
 float ingresarOperando(char mensaje[]);
 
@@ -16,12 +18,15 @@ int main()
 
     while(seguir=='s')
     {
-        imprimirMenu();
+        imprimirMenu(0);
 
         printf("\nA=%.2f B=%.2f\n\n", a, b);
 
         printf("Ingrese una opcion: ");
         scanf("%d",&opcion);
+
+        system("cls");
+        imprimirMenu(opcion);
 
         switch(opcion)
         {
@@ -86,22 +91,41 @@ float ingresarOperando(char mensaje[]) {
     return operando;
 }
 
-void imprimirMenu() {
+void imprimirMenu(int opcion) {
+    char menu[9][40] = {
+        " 1- Ingresar 1er operando (A=x)      ",
+        " 2- Ingresar 2do operando (B=y)      ",
+        " 3- Calcular la suma (A+B)           ",
+        " 4- Calcular la resta (A-B)          ",
+        " 5- Calcular la division (A/B)       ",
+        " 6- Calcular la multiplicacion (A*B) ",
+        " 7- Calcular el factorial (A!)       ",
+        " 8- Calcular todas las operaciones   ",
+        " 9- Salir                            "
+    };
+
+    setColor(1, 15);
     printf("%c",218);
     printChar(196, 37);
-    printf("%c\n",191);
-    printf("%c 1- Ingresar 1er operando (A=x)      %c \n", 179, 179);
-    printf("%c 2- Ingresar 2do operando (B=y)      %c \n", 179, 179);
-    printf("%c 3- Calcular la suma (A+B)           %c \n", 179, 179);
-    printf("%c 4- Calcular la resta (A-B)          %c \n", 179, 179);
-    printf("%c 5- Calcular la division (A/B)       %c \n", 179, 179);
-    printf("%c 6- Calcular la multiplicacion (A*B) %c \n", 179, 179);
-    printf("%c 7- Calcular el factorial (A!)       %c \n", 179, 179);
-    printf("%c 8- Calcular todas las operaciones   %c \n", 179, 179);
-    printf("%c 9- Salir                            %c \n", 179, 179);
+    printf("%c \n",191);
+
+    for(int i = 1; i <= 9; i++) {
+        printf("%c", 179);
+        if(opcion == i) {
+            setColor(2, 15);
+        }
+        printf(menu[i-1]);
+        if(opcion == i) {
+            setColor(1, 15);
+        }
+        printf("%c \n", 179);
+    }
+
     printf("%c",192);
     printChar(196, 37);
-    printf("%c\n",217);
+    printf("%c \n",217);
+
+    setColor(0, 15);
 }
 
 void printChar(char c, int a) {
@@ -112,5 +136,11 @@ void printChar(char c, int a) {
 
 void hacerPausa() {
     printf("\nPresiona una techa para continuar");
-    getch(); //pausa
+    getch();
+}
+
+void setColor(int background, int text){
+ HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+ int ncolor = text + (background * 16);
+ SetConsoleTextAttribute(console, ncolor);
 }
