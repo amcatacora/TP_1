@@ -5,6 +5,8 @@
 
 void imprimirMenu();
 void hacerPausa();
+void printChar(char c, int a);
+float ingresarOperando(char mensaje[]);
 
 int main()
 {
@@ -24,12 +26,10 @@ int main()
         switch(opcion)
         {
             case 1:
-                printf ("\nIngresar 1er operando: ");
-                scanf ("%f", &a);
+                a = ingresarOperando("\nIngresar 1er operando: ");
                 break;
             case 2:
-                printf ("\nIngresar 2do operando: ");
-                scanf ("%f", &b);
+                b = ingresarOperando("\nIngresar 2do operando: ");
                 break;
             case 3:
                 resultado = suma(a, b);
@@ -52,20 +52,38 @@ int main()
                 printf("\nEl factorial de A es: %.2f\n", resultado);
                 break;
             case 8:
+                resultado = suma(a, b);
+                printf("\nLa suma de los operandos es: %.2f\n", resultado);
+                resultado = resta(a, b);
+                printf("\nLa diferencia entre los operandos es: %.2f\n", resultado);
+                resultado = division(a, b);
+                printf("\nLa division entre los operandos es: %.2f\n", resultado);
+                resultado = multiplicacion(a, b);
+                printf("\nLa multiplicacion entre los operandos es: %.2f\n", resultado);
+                resultado = factorial(a);
+                printf("\nEl factorial de A es: %.2f\n", resultado);
                 break;
             case 9:
                 seguir = 'n';
                 break;
-            default:
-                // hacerPausa();
             break;
         }
         if(opcion != 9) {
-            hacerPausa();
+            if(opcion > 2 && opcion < 9) {
+                hacerPausa();
+            }
+            system("cls");
         }
     }
 
     return 0;
+}
+
+float ingresarOperando(char mensaje[]) {
+    float operando = 0;
+    printf (mensaje);
+    scanf ("%f", &operando);
+    return operando;
 }
 
 void imprimirMenu() {
@@ -86,7 +104,7 @@ void imprimirMenu() {
     printf("%c\n",217);
 }
 
-void printChar(c, a) {
+void printChar(char c, int a) {
     for(int i=0;i<a;i++) {
         printf("%c", c);
     }
@@ -95,5 +113,4 @@ void printChar(c, a) {
 void hacerPausa() {
     printf("\nPresiona una techa para continuar");
     getch(); //pausa
-    system("cls"); //limpia la consola
 }

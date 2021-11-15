@@ -8,31 +8,35 @@ int factorial(int n) {
         return 1;
     }
 }
+
 /*
     Calcular la suma (A+B)
 */
-int suma(int a, int b){
-    int resultado = a + b;
-    return resultado;
+float suma(float a, float b){
+    return a + b;
 }
+
 /*
-    Calcular la resta (A+B)
+    Calcular la resta (A-B)
 */
-int resta(int a, int b){
-  int resultado = a - b;
-  return resultado;
+float resta(float a, float b){
+  return a - b;
 }
+
 /*
-    Calcular la division (A+B)
+    Calcular la division (A/B)
 */
-int division(int a, int b){
-  int resultado = a / b;
-  return resultado;
+float division(float a, float b){
+    if(b > 0 ) {
+        return a / b;
+    } else {
+        return 0;
+    }
 }
+
 /*
-    Calcular la division (A+B)
+    Calcular la multiplicacion (A*B)
 */
-int multiplicacion(int a, int b){
-  int resultado = a * b;
-  return resultado;
+float multiplicacion(float a, float b){
+  return a * b;
 }
