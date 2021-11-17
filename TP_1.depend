@@ -10,10 +10,11 @@
 
 1636990202 source:c:\users\adrian catacora\desktop\utn\programacion\proyectos\git\tp_1_prueba\funciones.c
 
-1636990769 source:c:\users\adrian catacora\desktop\utn\programacion\proyectos\git\tp_1_prueba\main.c
+1637003314 source:c:\users\adrian catacora\desktop\utn\programacion\proyectos\git\tp_1_prueba\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
+	<windows.h>
 	"funciones.h"
 
 1636990062 c:\users\adrian catacora\desktop\utn\programacion\proyectos\git\tp_1_prueba\funciones.h
