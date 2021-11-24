@@ -1,3 +1,6 @@
+//AGREGUE LA LIBRERIA EN REFERENCIA PORQUE NO COMPILABA
+#include "funciones.h"
+
 /*
     Calcular factorial de un numero
 */

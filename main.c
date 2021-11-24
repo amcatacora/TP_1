@@ -65,8 +65,8 @@ int main()
 				hacerPausa();
                 break;
             case 7:
-                resultado = factorial(a);
-                printf("\nEl factorial de A es: %.2f\n", resultado);
+                resultado = factorial( a);
+                printf("\nEl factorial de A, primer numero es: %.2f\n", resultado);
 				hacerPausa();
                 break;
             case 8:
@@ -93,9 +93,13 @@ int main()
 }
 
 float ingresarOperando(char mensaje[]) {
-    float operando = 0;
+    float operando = 0.001;
     printf (mensaje);
     scanf ("%f", &operando);
+    if(operando == 0.001){
+        printf("No se ingreso un valor correcto");
+        operando =ingresarOperando(mensaje);
+    }
     return operando;
 }
 
