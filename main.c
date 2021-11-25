@@ -9,29 +9,34 @@ void imprimirOperandos(float a, float b);
 void hacerPausa();
 void setColor(int background, int text);
 void printChar(char c, int a);
-float ingresarOperando(char mensaje[]);
+float ingresarOperando(char mensaje[], int *error);
 
 int main()
 {
     int opcion = 0;
+    int error = 0;
     float a = 0, b = 0, resultado = 0;
     imprimirMenu(opcion);
     imprimirOperandos(a, b);
 
     do
     {
-        opcion = getch();
-        switch(opcion) {
-            case 49: opcion = 1; break;
-            case 50: opcion = 2; break;
-            case 51: opcion = 3; break;
-            case 52: opcion = 4; break;
-            case 53: opcion = 5; break;
-            case 54: opcion = 6; break;
-            case 55: opcion = 7; break;
-            case 56: opcion = 8; break;
-            case 57: opcion = 9; break;
-            default: opcion = 0; break;
+        if(error == 0) {
+            opcion = getch();
+            switch(opcion) {
+                case 49: opcion = 1; break;
+                case 50: opcion = 2; break;
+                case 51: opcion = 3; break;
+                case 52: opcion = 4; break;
+                case 53: opcion = 5; break;
+                case 54: opcion = 6; break;
+                case 55: opcion = 7; break;
+                case 56: opcion = 8; break;
+                case 57: opcion = 9; break;
+                default: opcion = 0; break;
+            }
+        } else {
+            error = 0;
         }
         system("cls");
         imprimirMenu(opcion);
@@ -39,10 +44,10 @@ int main()
 
         switch(opcion) {
             case 1:
-                a = ingresarOperando("Ingresar 1er operando: ");
+                a = ingresarOperando("\nIngresar 1er operando: ", &error);
                 break;
             case 2:
-                b = ingresarOperando("Ingresar 2do operando: ");
+                b = ingresarOperando("\nIngresar 2do operando: ", &error);
                 break;
             case 3:
                 resultado = suma(a, b);
@@ -92,13 +97,16 @@ int main()
     return 0;
 }
 
-float ingresarOperando(char mensaje[]) {
-    float operando = 0.001;
+float ingresarOperando(char mensaje[], int *error) {
+    float operando = 0;
     printf (mensaje);
-    scanf ("%f", &operando);
-    if(operando == 0.001){
-        printf("No se ingreso un valor correcto");
-        operando =ingresarOperando(mensaje);
+    if(scanf ("%f", &operando) == 0) {
+        for( int c = getchar(); c != EOF && c != ' ' && c != '\n' ; c = getchar());
+        printf("\nSe ingreso un valor incorrecto!\n");
+        hacerPausa();
+        *error = 1;
+    } else {
+        *error = 0;
     }
     return operando;
 }
