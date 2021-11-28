@@ -1,9 +1,11 @@
+///Librerias que se utilizaron
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
 #include <windows.h>
 #include "funciones.h"
 
+///definicion de colores
 #define COLOR_NEGRO 0
 #define COLOR_AZUL 1
 #define COLOR_VERDE 2
@@ -11,6 +13,7 @@
 #define COLOR_ROJO 4
 #define COLOR_BLANCO 15
 
+///declaracion de funciones
 void imprimirMenu(int opcion);
 void imprimirOperandos(float a, float b);
 void hacerPausa();
@@ -34,7 +37,7 @@ int main()
     do
     {
         if(error == 0) {
-            opcion = getch();
+            opcion = getch(); ///getch es una funcion que utilizamos para que se tome el codigo ascii
             switch(opcion) {
                 case 49: opcion = 1; break;
                 case 50: opcion = 2; break;
@@ -51,7 +54,7 @@ int main()
         } else {
             error = 0;
         }
-        system("cls");
+        system("cls"); ///limpia el sistema
         imprimirMenu(opcion);
         imprimirOperandos(a, b);
 
@@ -203,7 +206,7 @@ void printChar(char c, int a) {
 }
 
 void hacerPausa() {
-    printf("\nPresiona una techa para continuar");
+    printf("\nPresiona una tecla para continuar");
     getch();
 }
 
