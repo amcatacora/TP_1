@@ -55,7 +55,7 @@ int main()
         } else {
             error = 0;
         }
-        system("cls"); ///limpia el sistema
+        system("cls"); ///limpia la pantalla
         imprimirMenu(opcion);
         imprimirOperandos(a, b);
 
@@ -249,16 +249,16 @@ int calculadoraVirtual()
                 break;//igual o enter
 
             //numeros
-            case 48: setPressNumber(primerOperando, &operando1, &operando2, 0); break;//numero 1
-            case 49: setPressNumber(primerOperando, &operando1, &operando2, 1); break;//numero 2
-            case 50: setPressNumber(primerOperando, &operando1, &operando2, 2); break;//numero 3
-            case 51: setPressNumber(primerOperando, &operando1, &operando2, 3); break;//numero 4
-            case 52: setPressNumber(primerOperando, &operando1, &operando2, 4); break;//numero 5
-            case 53: setPressNumber(primerOperando, &operando1, &operando2, 5); break;//numero 6
-            case 54: setPressNumber(primerOperando, &operando1, &operando2, 6); break;//numero 7
-            case 55: setPressNumber(primerOperando, &operando1, &operando2, 7); break;//numero 8
-            case 56: setPressNumber(primerOperando, &operando1, &operando2, 8); break;//numero 9
-            case 57: setPressNumber(primerOperando, &operando1, &operando2, 9); break;//numero 10
+            case 48: setPressNumber(primerOperando, &operando1, &operando2, 0); break;//numero 0
+            case 49: setPressNumber(primerOperando, &operando1, &operando2, 1); break;//numero 1
+            case 50: setPressNumber(primerOperando, &operando1, &operando2, 2); break;//numero 2
+            case 51: setPressNumber(primerOperando, &operando1, &operando2, 3); break;//numero 3
+            case 52: setPressNumber(primerOperando, &operando1, &operando2, 4); break;//numero 4
+            case 53: setPressNumber(primerOperando, &operando1, &operando2, 5); break;//numero 5
+            case 54: setPressNumber(primerOperando, &operando1, &operando2, 6); break;//numero 6
+            case 55: setPressNumber(primerOperando, &operando1, &operando2, 7); break;//numero 7
+            case 56: setPressNumber(primerOperando, &operando1, &operando2, 8); break;//numero 8
+            case 57: setPressNumber(primerOperando, &operando1, &operando2, 9); break;//numero 9
         }
     } while(key != 27);
 
