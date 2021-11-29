@@ -37,7 +37,8 @@ int main()
     do
     {
         if(error == 0) {
-            opcion = getch(); ///getch es una funcion que utilizamos para que se tome el codigo ascii
+            opcion = getch(); ///getch es una funcion que usamos para hacer una pausa esperando al usuario, y la funcion
+                             /// devuelve la tecla que se toco, en codigo ascii
             switch(opcion) {
                 case 49: opcion = 1; break;
                 case 50: opcion = 2; break;
