@@ -296,40 +296,44 @@ void imprimirCalculadoraVirtual(int primerOperando, float operando1, float opera
     //linea de inicio
     setColor(COLOR_AZUL, COLOR_BLANCO);
     printf("%c",218);
-    printChar(196, 43);
+    printChar(196, 37);
     printf("%c\n",191);
 
     //linea operandos ingresados
     printf("%c", 179);
-    char ing[43] = "";
+    char ing[37] = "";
     if(primerOperando == 0) {
         char op[5] = {'+','-','*','/','!'};
         sprintf(ing,"%.2f %c %.2f", operando1, op[operador-1], operando2);
     } else {
         sprintf(ing,"%.2f", operando1);
     }
-    printf("%43s", ing);
+    printf("%37s", ing);
     printf("%c\n", 179);
 
     //linea operandos
     printf("%c", 179);
     setColor(COLOR_NEGRO, COLOR_BLANCO);
     if(primerOperando == 1) {
-        printf("%43.2f", operando1);
+        printf("%37.2f", operando1);
     } else {
-        printf("%43.2f", operando2);
+        printf("%37.2f", operando2);
     }
 
     setColor(COLOR_AZUL, COLOR_BLANCO);
     printf("%c\n", 179);
 
     printf("%c",195);
-    printChar(196, 43);
+    printChar(196, 37);
     printf("%c\n",180);
 
     //operandos  + - / * ! =
 
     printf("%c", 179);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
     setColor(COLOR_AZUL, COLOR_BLANCO);
     printf("%c",32);
     setColor(COLOR_VERDE, COLOR_BLANCO);
@@ -348,22 +352,134 @@ void imprimirCalculadoraVirtual(int primerOperando, float operando1, float opera
     printf("  %c  ", '/');
     setColor(COLOR_AZUL, COLOR_BLANCO);
     printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf(" %c\n", 179);
+
+    printf("%c                                     %c\n", 179, 179);
+
+    printf("%c", 179);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '7');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '8');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '9');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
     setColor(COLOR_VERDE, COLOR_BLANCO);
     printf("  %c  ", '!');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf(" %c\n", 179);
+
+    printf("%c                                     %c\n", 179, 179);
+
+    printf("%c", 179);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '4');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '5');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '6');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_ROJO, COLOR_BLANCO);
+    printf("  %c  ", '<');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf(" %c\n", 179);
+
+    printf("%c                                     %c\n", 179, 179);
+
+    printf("%c", 179);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '1');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '2');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '3');
     setColor(COLOR_AZUL, COLOR_BLANCO);
     printf("%c",32);
     setColor(COLOR_CELESTE, COLOR_BLANCO);
     printf("  %c  ", '=');
     setColor(COLOR_AZUL, COLOR_BLANCO);
     printf("%c",32);
-    setColor(COLOR_ROJO, COLOR_BLANCO);
-    printf("  %c  ", '<');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf(" %c\n", 179);
+
+    printf("%c                                     %c\n", 179, 179);
+
+    printf("%c", 179);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_VERDE, COLOR_BLANCO);
+    printf("  %c  ", '0');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("%c",32);
+    setColor(COLOR_AZUL, COLOR_BLANCO);
+    printf("  %c  ", ' ');
     setColor(COLOR_AZUL, COLOR_BLANCO);
     printf(" %c\n", 179);
 
     //linea de fin
     printf("%c",192);
-    printChar(196, 43);
+    printChar(196, 37);
     printf("%c\n",217);
 
     setColor(COLOR_NEGRO, COLOR_BLANCO);
