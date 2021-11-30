@@ -77,8 +77,12 @@ int main()
 				hacerPausa();
                 break;
             case 5:
-                resultado = division(a, b);
-                printf("\nLa division entre los operandos es: %.2f\n", resultado);
+                if(b == 0) {
+                    printf("\nEl divisor B no puede ser cero.\n");
+                } else {
+                    resultado = division(a, b);
+                    printf("\nLa division entre los operandos es: %.2f\n", resultado);
+                }
 				hacerPausa();
                 break;
             case 6:
@@ -87,7 +91,7 @@ int main()
 				hacerPausa();
                 break;
             case 7:
-                resultado = factorial( a);
+                resultado = factorial(a);
                 printf("\nEl factorial de A, primer numero es: %.2f\n", resultado);
 				hacerPausa();
                 break;

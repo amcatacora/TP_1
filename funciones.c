@@ -1,6 +1,3 @@
-//AGREGUE LA LIBRERIA EN REFERENCIA PORQUE NO COMPILABA
-#include "funciones.h"
-
 /*
     Calcular factorial de un numero
 */
@@ -30,11 +27,7 @@ float resta(float a, float b){
     Calcular la division (A/B)
 */
 float division(float a, float b){
-    if(b > 0 ) {
-        return a / b;
-    } else {
-        return 0;
-    }
+  return a / b;
 }
 
 /*
